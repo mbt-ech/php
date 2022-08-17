@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+.main-box{
+    width: 30%;
+    box-shadow: 0 0 5px grey, inset 0 0 10px black;
+    height: 80vh;
+   display: flex;
+   margin-top: 27px;
+  
+}
+.main-box>.box-one{
+    width: 94%;
+    border: 1px solid;
+    height: 78vh;
+    margin-left: 2.5%;
+    margin-top: 5px;
+    background: linear-gradient(20deg, rgb(34, 34, 34) 10%, rgb(12, 12, 12) 40%);
+}
+.main-box>.box-one>.box-two{
+    display: flex;
+    flex-direction: column;
+    width: 94%;
+    margin-left: 2.5%;
+}
+.main-box>.box-one>.display-container{
+    height: 29vh;
+    width: 95%;
+    box-shadow: inset 0 0 18px grey;
+    margin-left: 2.5%;
+}
+.main-box>.box-one>.display-container .main-display input{
+    width: 93%;
+    height: 14vh;
+    margin-left: 2.6%;
+    border: 1px solid black;
+    box-shadow: inset 0 0 10px black;
+    margin-top: 3px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.main-box>.box-one>.display-container .power-btn{
+    position: relative;
+    float: right;
+    margin-right: 9px;
+}
+.main-box>.box-one>.display-container .display-text small{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 3px;
+    color: white;
+}
+.main-box>.box-one>.display-container .power-btn button{
+    width: 70px;
+    height: 28px;
+    padding: 1px 3px;
+    margin-top: 7px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.main-box>.box-one>.box-two{
+    margin-top: 7px;
+}
+.main-box>.box-one>.box-two span{
+display: flex;
+justify-content: space-around;
+padding-bottom: 10px;
+}
+.main-box>.box-one>.box-two> span button{
+    width: 100px;
+    margin: 2px;
+    height: 33px;
+    padding: 1px 5px;
+    font-weight: bold;
+    background-color: grey;
+    color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.main-box>.box-one>.box-three{
+    display: flex;
+    flex-direction: column;
+    width: 94%;
+    margin-top: 10px;
+    margin-left: 2.5%;
+}
+.main-box>.box-one>.box-three span{
+display: flex;
+justify-content: space-around;
+padding-bottom: 10px;
+}
+.main-box>.box-one>.box-three> span button{
+    width: 100px;
+    margin: 2px;
+    height: 33px;
+    padding: 1px 5px;
+    font-weight: bold;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+@media screen and (max-width:800px) {
+    .main-box{
+        width: 100%;
+
+    }
+}
+    </style>
+</head>
+<body>
+<center>
+    <section class="main-box">
+        <section class="box-one">
+            <article class="display-container">
+                <div class="display-text">
+                    <small>Designed by: Thomas Blah Jr.</small>
+                </div>
+              <div class="main-display">
+                  <input type="text" id="result">
+              </div>
+            </article>
+            <div class="box-two">
+                <span>
+                    <button onclick="X2()">x<sup>2</sup></button>
+                    <button onclick="X3()">x<sup>3</sup></button>
+                    <button onclick="X4()">x<sup>4</sup></button>
+                    <button onclick="X5()">x<sup>5</sup></button>
+                    <button onclick="X6()">x<sup>6</sup></button>
+                    <button onclick="X7()">x<sup>7</sup></button>
+                </span>
+                <span>
+                    <button onclick="log()">log</button>
+                    <button onclick="In()">INS</button>
+                    <button>e</button>
+                    <button onclick="cos()">cos</button>
+                    <button onclick="sin()">sin</button>
+                    <button onclick="tan()">tan</button>
+                </span>
+            </div>
+               <div class="box-three">
+                   <span>
+                       <button onclick="dis('7')">7</button>
+                       <button onclick="dis('8')">8</button>
+                       <button onclick="dis('9')">9</button>
+                       <button onclick="del()">DEL</button>
+                       <button onclick="del()">AC</button>
+                   </span>
+                   <span>
+                    <button onclick="dis('4')">4</button>
+                    <button onclick="dis('5')">5</button>
+                    <button onclick="dis('6')">6</button>
+                    <button onclick="dis('*')">*</button>
+                    <button onclick="dis('/')">/</button>
+                   </span>
+                   <span>
+                    <button onclick="dis('1')">1</button>
+                    <button onclick="dis('2')">2</button>
+                    <button onclick="dis('3')">3</button>
+                    <button onclick="dis('+')">+</button>
+                    <button onclick="dis('-')">-</button>
+                   </span>
+                   <span>
+                    <button onclick="dis('0')">0</button>
+                    <button onclick="dis('.')">.</button>
+                    <button>EXP</button>
+                    <button onclick="ans()">Ans</button>
+                    <button onclick="slove()">=</button>
+                   </span>
+            </div>
+            <small style="color: white; font-size: 15px; font-style: oblique;"> motto: technology is life</small>
+        </section>
+    </section>
+</center>
+
+
+
+<!--Js functions-->
+<script>
+    function dis(val){
+    const display=document.getElementById("result")
+    display.value += val
+}
+function slove(){
+    const display=document.getElementById("result")
+    let x = display.value
+    let y = eval (x)
+    display.value = y
+}
+function ans(){
+    const display=document.getElementById("result")
+    let x = display.value
+    let y = eval (x)
+    display.value = y
+}
+function del(){
+    const display=document.getElementById("result")
+    display.value = ' '
+}
+function X2(){
+    const display=document.getElementById("result")
+    display.value = Math.pow(display.value,2)  
+}
+function X3(){
+    const display=document.getElementById("result")
+    display.value = Math.pow(display.value,3)  
+}
+function X4(){
+    const display=document.getElementById("result")
+    display.value = Math.pow(display.value,4)  
+}
+function X5(){
+    const display=document.getElementById("result")
+    display.value = Math.pow(display.value,5)  
+}
+function X6(){
+    const display=document.getElementById("result")
+    display.value = Math.pow(display.value,6)  
+}
+function X7(){
+    const display=document.getElementById("result")
+    display.value = Math.pow(display.value,7)  
+}
+function log(){
+    const display=document.getElementById("result")
+    display.value = Math.log10(display.value) 
+}
+function In(){
+    const display=document.getElementById("result")
+    display.value = Math.log(display.value) 
+}
+function cos(){
+    const display=document.getElementById("result")
+    display.value = Math.cos(display.value*(Math.PI/180))
+}
+function tan(){
+    const display=document.getElementById("result")
+    display.value = Math.tan(display.value*(Math.PI/180))
+}
+function sin(){
+    const display=document.getElementById("result")
+    display.value = Math.sin(display.value*(Math.PI/180))
+}
+    </script>
+</body>
+</html>
